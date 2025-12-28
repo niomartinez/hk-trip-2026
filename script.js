@@ -5,22 +5,29 @@
 // Document Links Configuration
 // Replace these placeholders with actual GDrive URLs
 const DOCUMENT_LINKS = {
-    flight: 'https://drive.google.com/file/d/YOUR_FLIGHT_TICKET_ID/view',
-    insurance: 'https://drive.google.com/file/d/YOUR_INSURANCE_ID/view',
-    hotel1: 'https://drive.google.com/file/d/YOUR_HOTEL1_ID/view',
-    hotel2: 'https://drive.google.com/file/d/YOUR_HOTEL2_ID/view',
+    flight: 'https://drive.google.com/file/d/1NHu2H0W6aGRt1TVN-aIy8QilJx5NRJ9A/view?usp=sharing',
+    insurance: 'https://drive.google.com/file/d/1d9dhJZ-xRGo92UnhayPdiCKTFgFxBHXP/view?usp=sharing',
+    hotel1: 'https://drive.google.com/file/d/1gpQAANA96ag-sYyoZxgEz--tkGveFYH2/view?usp=sharing',
+    hotel2: 'https://drive.google.com/file/d/1l3_7uPoVg-Pvm5mMjY328hZZCVoKFAFX/view?usp=sharing',
+    hotel2_receipt: 'https://drive.google.com/file/d/1-xSUpsCTXHIKA3AoAA4auyhNFZwi5ZC6/view?usp=sharing',
     marketplace: 'https://drive.google.com/file/d/YOUR_MARKETPLACE_ID/view',
     baby: 'https://drive.google.com/file/d/YOUR_BABY_FAIR_ID/view',
     toys: 'https://drive.google.com/file/d/YOUR_TOYS_FAIR_ID/view',
     stationery: 'https://drive.google.com/file/d/YOUR_STATIONERY_FAIR_ID/view',
     invitation: 'https://drive.google.com/file/d/YOUR_INVITATION_ID/view',
-    leave: 'https://drive.google.com/file/d/YOUR_LEAVE_APPROVAL_ID/view',
-    coe: 'https://drive.google.com/file/d/YOUR_COE_ID/view',
-    noc: 'https://drive.google.com/file/d/YOUR_NOC_ID/view',
+    leave: 'https://drive.google.com/file/d/1O4-VZc80qWvp4_1fuTv1TfYWrWZqd5wA/view?usp=sharing',
+    coe: 'https://drive.google.com/file/d/1AyqWSTGjWsTN1t5zlIGxXqIdW7Bk90Vj/view?usp=sharing',
+    noc: 'https://drive.google.com/file/d/1d9dhJZ-xRGo92UnhayPdiCKTFgFxBHXP/view?usp=sharing',
+    leave_khatelyn: 'https://drive.google.com/file/d/YOUR_KHATELYN_LEAVE_ID/view',
+    coe_khatelyn: 'https://drive.google.com/file/d/YOUR_KHATELYN_COE_ID/view',
     companyid: 'https://drive.google.com/file/d/YOUR_COMPANY_ID_ID/view',
-    passport: 'https://drive.google.com/file/d/YOUR_PASSPORT_ID/view',
-    vaxx: 'https://drive.google.com/file/d/YOUR_VACCINATION_ID/view',
-    bank: 'https://drive.google.com/file/d/YOUR_BANK_STATEMENT_ID/view'
+    passport_nio: 'https://drive.google.com/file/d/1IsS2z80vvHGQfw6IiS5KxXfgnCZmiAfR/view?usp=drive_link',
+    passport_khatelyn: 'https://drive.google.com/file/d/1HcSXZ1_Sapvytu52MwaYvPGKfZ_2quaN/view?usp=sharing',
+    vaxx_nio_front: 'https://drive.google.com/file/d/1NAeuOB-6RZLo2aJLFoY7YY3wTE5uudzo/view?usp=sharing',
+    vaxx_nio_back: 'https://drive.google.com/file/d/1Yziki0GSkkTsf-uMRqtERD859pKHwtYT/view?usp=sharing',
+    vaxx_khatelyn: 'https://drive.google.com/file/d/1G44SQKn6zInCQ60K0n0xVLa1E4BHwbzl/view?usp=sharing',
+    bank_nio: 'https://drive.google.com/file/d/YOUR_BANK_NIO_ID/view',
+    bank_khatelyn: 'https://drive.google.com/file/d/YOUR_BANK_KHATELYN_ID/view'
 };
 
 /* =================================

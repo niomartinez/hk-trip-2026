@@ -66,7 +66,7 @@ A dark-themed, mobile-friendly static website serving as an all-in-one hub for t
 
 ## 📍 Day-by-Day Itinerary
 
-### Day 1 - January 13 (Monday)
+### Day 1 - January 13 (Tuesday)
 | Time | Activity |
 |------|----------|
 | 5:45 PM | Depart Manila (flight to HK) |
@@ -74,21 +74,21 @@ A dark-themed, mobile-friendly static website serving as an all-in-one hub for t
 | Evening | Check-in at Hotel 1 (IPUK-sponsored) |
 | Night | Dinner with Khatelyn's boss from IPUK (UK) |
 
-### Day 2 - January 14 (Tuesday)
+### Day 2 - January 14 (Wednesday)
 | Time | Activity |
 |------|----------|
 | Morning | Breakfast |
 | Daytime | **HKTDC Baby Products Fair** @ Hong Kong Convention Centre |
 | Evening | Free time / Rest |
 
-### Day 3 - January 15 (Wednesday)
+### Day 3 - January 15 (Thursday)
 | Time | Activity |
 |------|----------|
 | Morning | Breakfast |
 | Daytime | **HKTDC Trade Fair** (continuation) |
 | Evening | Free time / Rest |
 
-### Day 4 - January 16 (Thursday)
+### Day 4 - January 16 (Friday)
 | Time | Activity |
 |------|----------|
 | Morning | Checkout from Hotel 1 |
@@ -97,21 +97,21 @@ A dark-themed, mobile-friendly static website serving as an all-in-one hub for t
 | Afternoon | **Leisure Day** - Victoria Peak Tram / The Peak |
 | Evening | Dine & explore |
 
-### Day 5 - January 17 (Friday)
+### Day 5 - January 17 (Saturday)
 | Time | Activity |
 |------|----------|
 | Daytime | Explore Tsim Sha Tsui (TST) |
 | Daytime | Tourist spots, shopping |
 | Evening | Night market, food trip |
 
-### Day 6 - January 18 (Saturday)
+### Day 6 - January 18 (Sunday)
 | Time | Activity |
 |------|----------|
 | Daytime | Continue TST exploration |
 | Daytime | More shopping, tourist spots |
 | Evening | Night market, food trip |
 
-### Day 7 - January 19 (Sunday)
+### Day 7 - January 19 (Monday)
 | Time | Activity |
 |------|----------|
 | Morning | Breakfast |

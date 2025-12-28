@@ -208,6 +208,91 @@ body {
     margin-right: var(--spacing-xs);
 }
 
+/* Document section notes and info boxes */
+.section-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-xs) 0;
+}
+
+.doc-note {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--spacing-xs) 0;
+    display: block;
+}
+
+.doc-note::before {
+    content: 'ℹ️';
+    margin-right: var(--spacing-xs);
+}
+
+.info-box {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.info-box h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.instruction-list {
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.instruction-list li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.7;
+}
+
+.instruction-list strong {
+    color: var(--accent);
+}
+
+.instruction-list em {
+    color: var(--text-muted);
+}
+
+.app-links {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border);
+}
+
+.app-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.app-links a:hover {
+    text-decoration: underline;
+}
+
+.registered-fairs {
+    margin-top: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.fair-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--spacing-xs);
+}
+
+.fair-list li {
+    padding: var(--spacing-xs) 0;
+    color: var(--text-secondary);
+}
+
 /* =================================
    Itinerary Section
    ================================= */
