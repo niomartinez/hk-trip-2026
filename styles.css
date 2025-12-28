@@ -1,0 +1,610 @@
+/* =================================
+   Hong Kong Trip 2026 - Dark Theme
+   ================================= */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --text-primary: #ffffff;
+    --text-secondary: #c9d1d9;
+    --text-muted: #8b949e;
+    --success: #238636;
+    --warning: #d29922;
+    --danger: #da3633;
+    --border: #30363d;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Transitions */
+    --transition: all 0.2s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* =================================
+   Header
+   ================================= */
+
+.header {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--spacing-lg);
+}
+
+.header h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.trip-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.trip-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.trip-info strong {
+    color: var(--text-secondary);
+}
+
+/* =================================
+   Tab Navigation
+   ================================= */
+
+.tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--border);
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.tab-button:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.tab-button.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* =================================
+   Tab Content
+   ================================= */
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content h2 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border);
+}
+
+/* =================================
+   Cards
+   ================================= */
+
+.card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.card h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+/* =================================
+   Documents Section
+   ================================= */
+
+.doc-list {
+    list-style: none;
+}
+
+.doc-list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.doc-link {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    transition: var(--transition);
+}
+
+.doc-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.doc-link::before {
+    content: '📎';
+    margin-right: var(--spacing-xs);
+}
+
+/* =================================
+   Itinerary Section
+   ================================= */
+
+.itinerary-day {
+    margin-bottom: var(--spacing-md);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.day-header:hover {
+    background-color: var(--bg-primary);
+}
+
+.day-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.toggle-icon {
+    color: var(--accent);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.day-header.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.day-content {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+}
+
+.day-content.hidden {
+    display: none;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table tr {
+    border-bottom: 1px solid var(--border);
+}
+
+.schedule-table tr:last-child {
+    border-bottom: none;
+}
+
+.schedule-table td {
+    padding: var(--spacing-sm);
+    vertical-align: top;
+}
+
+.schedule-table .time {
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+    width: 120px;
+}
+
+/* =================================
+   Immigration Section
+   ================================= */
+
+.print-notice {
+    background-color: var(--bg-tertiary);
+    border-left: 4px solid var(--accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--radius-sm);
+}
+
+.print-notice p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.purpose {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: var(--spacing-sm) 0;
+}
+
+.immigration-points {
+    padding-left: var(--spacing-md);
+}
+
+.immigration-points li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.8;
+}
+
+.immigration-points strong {
+    color: var(--text-primary);
+}
+
+.immigration-docs {
+    list-style: none;
+    padding-left: 0;
+}
+
+.immigration-docs li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.immigration-docs li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.warning-card {
+    background-color: #2d2a1f;
+    border-color: var(--warning);
+}
+
+.warning-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.warning-list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+    color: #ffc777;
+}
+
+.warning-list li::before {
+    content: '⚠';
+    position: absolute;
+    left: 0;
+    color: var(--warning);
+}
+
+/* =================================
+   Emergency Section
+   ================================= */
+
+.emergency-card {
+    border-left: 4px solid var(--danger);
+}
+
+.emergency-contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: var(--spacing-sm);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.contact-value a,
+a.contact-value {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-value a:hover,
+a.contact-value:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.emergency-number {
+    color: var(--danger) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* =================================
+   Checklist Section
+   ================================= */
+
+.checklist {
+    list-style: none;
+}
+
+.checklist li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+}
+
+.checklist input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--spacing-sm);
+    cursor: pointer;
+    accent-color: var(--success);
+}
+
+.checklist label {
+    cursor: pointer;
+    user-select: none;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.checklist input[type="checkbox"]:checked + label {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.checklist-progress {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.checklist-progress p {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#checklist-count {
+    color: var(--success);
+}
+
+/* =================================
+   Footer
+   ================================= */
+
+.footer {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.footer p {
+    margin: 0.25rem 0;
+}
+
+/* =================================
+   Print Styles
+   ================================= */
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .header,
+    .tabs,
+    .footer,
+    .print-notice {
+        display: none;
+    }
+
+    .tab-content {
+        display: block !important;
+    }
+
+    .tab-content:not(#immigration) {
+        display: none !important;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+
+    h2, h3 {
+        color: black;
+    }
+
+    .immigration-points,
+    .immigration-docs,
+    .warning-list {
+        color: black;
+    }
+}
+
+/* =================================
+   Responsive Design
+   ================================= */
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .trip-info {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .tabs {
+        gap: 0;
+    }
+
+    .tab-button {
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .tab-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: var(--spacing-sm);
+    }
+
+    .schedule-table .time {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .schedule-table td {
+        padding: var(--spacing-xs);
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tab-button {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+
+    .emergency-number {
+        font-size: 1.2rem;
+    }
+
+    .contact-value {
+        font-size: 1rem;
+    }
+}
+
+/* =================================
+   Accessibility
+   ================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
