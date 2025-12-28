@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary | Hong Kong Jan 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --text-muted: #666666;
+            --border: #e0e0e0;
+            --accent: #0066cc;
+            --header-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Traveler Info */
+        .travelers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .traveler-card {
+            background: var(--header-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .traveler-card h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .traveler-card p {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .traveler-card .passport {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Trip Summary */
+        .summary {
+            background: var(--header-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .summary-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .summary-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .summary-item .value {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .summary-item.full {
+            grid-column: 1 / -1;
+        }
+
+        /* Itinerary Table */
+        .itinerary-section {
+            margin-bottom: 20px;
+        }
+
+        .itinerary-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .itinerary-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .itinerary-table th {
+            background: var(--header-bg);
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        .itinerary-table td {
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .itinerary-table .day {
+            font-weight: 600;
+            white-space: nowrap;
+            width: 140px;
+            background: var(--header-bg);
+        }
+
+        .itinerary-table .activities {
+            line-height: 1.6;
+        }
+
+        .itinerary-table .activities strong {
+            color: var(--accent);
+        }
+
+        .itinerary-table .accommodation {
+            width: 180px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Accommodation Section */
+        .accommodation-section {
+            margin-bottom: 20px;
+        }
+
+        .accommodation-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .accommodation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .hotel-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .hotel-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .hotel-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 2px 0;
+        }
+
+        .hotel-card .status {
+            display: inline-block;
+            background: #d4edda;
+            color: #155724;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
+        /* Flight Info */
+        .flight-section {
+            margin-bottom: 20px;
+        }
+
+        .flight-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .flight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .flight-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .flight-card h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .flight-card .route {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .flight-card .details {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12px;
+            }
+
+            .itinerary-table {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .travelers,
+            .summary-grid,
+            .accommodation-grid,
+            .flight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .itinerary-table .accommodation {
+                display: none;
+            }
+
+            .itinerary-table .day {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>🇭🇰 Hong Kong Travel Itinerary</h1>
+        <p>January 13–19, 2026 (7 Days / 6 Nights)</p>
+    </header>
+
+    <!-- Travelers -->
+    <div class="travelers">
+        <div class="traveler-card">
+            <h3>Traveler 1</h3>
+            <p>Antonio Manuel S. Martinez</p>
+            <p class="passport">Passport: P2775118C · Filipino</p>
+        </div>
+        <div class="traveler-card">
+            <h3>Traveler 2</h3>
+            <p>Khatelyn Chrisse M. Beluso</p>
+            <p class="passport">Passport: P3027754C · Filipino</p>
+        </div>
+    </div>
+
+    <!-- Trip Summary -->
+    <div class="summary">
+        <div class="summary-grid">
+            <div class="summary-item">
+                <span class="label">Purpose of Visit</span>
+                <span class="value">Business + Tourism</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Length of Stay</span>
+                <span class="value">7 Days / 6 Nights</span>
+            </div>
+            <div class="summary-item full">
+                <span class="label">Business Activity</span>
+                <span class="value">HKTDC Baby Products Fair 2026 @ Hong Kong Convention Centre</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flight Information -->
+    <section class="flight-section">
+        <h2>✈️ Flight Information</h2>
+        <div class="flight-grid">
+            <div class="flight-card">
+                <h4>Departure</h4>
+                <p class="route">Manila → Hong Kong</p>
+                <p class="details">January 13, 2026 · 5:45 PM<br>Cebu Pacific</p>
+            </div>
+            <div class="flight-card">
+                <h4>Return</h4>
+                <p class="route">Hong Kong → Manila</p>
+                <p class="details">January 19, 2026 · 11:00 AM<br>Cebu Pacific</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation -->
+    <section class="accommodation-section">
+        <h2>🏨 Accommodation</h2>
+        <div class="accommodation-grid">
+            <div class="hotel-card">
+                <h4>Jan 13–16 (3 Nights)</h4>
+                <p>Sponsored by business partner</p>
+                <p>IPUK Ltd. (United Kingdom)</p>
+                <span class="status">✓ Confirmed & Paid</span>
+            </div>
+            <div class="hotel-card">
+                <h4>Jan 16–19 (3 Nights)</h4>
+                <p>Personal booking via Agoda</p>
+                <p>Hong Kong</p>
+                <span class="status">✓ Confirmed & Paid</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary -->
+    <section class="itinerary-section">
+        <h2>📅 Day-by-Day Itinerary</h2>
+        <table class="itinerary-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Activities</th>
+                    <th class="accommodation">Accommodation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day">Day 1<br><small>Jan 13 (Tue)</small></td>
+                    <td class="activities">
+                        Arrival in Hong Kong (9:00 PM)<br>
+                        Hotel check-in<br>
+                        Dinner with business partners
+                    </td>
+                    <td class="accommodation">Hotel 1<br>(Business Partner)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 2<br><small>Jan 14 (Wed)</small></td>
+                    <td class="activities">
+                        <strong>HKTDC Baby Products Fair</strong><br>
+                        Hong Kong Convention Centre<br>
+                        Business meetings with suppliers
+                    </td>
+                    <td class="accommodation">Hotel 1<br>(Business Partner)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 3<br><small>Jan 15 (Thu)</small></td>
+                    <td class="activities">
+                        <strong>HKTDC Trade Fair</strong> (continued)<br>
+                        Hong Kong Convention Centre<br>
+                        Business meetings
+                    </td>
+                    <td class="accommodation">Hotel 1<br>(Business Partner)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 4<br><small>Jan 16 (Fri)</small></td>
+                    <td class="activities">
+                        Hotel checkout<br>
+                        <strong>Victoria Peak</strong> sightseeing<br>
+                        Transfer to personal hotel
+                    </td>
+                    <td class="accommodation">Hotel 2<br>(Personal)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 5<br><small>Jan 17 (Sat)</small></td>
+                    <td class="activities">
+                        <strong>Tourism</strong> – Tsim Sha Tsui<br>
+                        Local sightseeing<br>
+                        Cultural exploration
+                    </td>
+                    <td class="accommodation">Hotel 2<br>(Personal)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 6<br><small>Jan 18 (Sun)</small></td>
+                    <td class="activities">
+                        <strong>Tourism</strong> – Tsim Sha Tsui<br>
+                        Local sightseeing<br>
+                        Cultural exploration
+                    </td>
+                    <td class="accommodation">Hotel 2<br>(Personal)</td>
+                </tr>
+                <tr>
+                    <td class="day">Day 7<br><small>Jan 19 (Mon)</small></td>
+                    <td class="activities">
+                        Hotel checkout<br>
+                        Departure to airport<br>
+                        <strong>Return flight to Manila (11:00 AM)</strong>
+                    </td>
+                    <td class="accommodation">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>All accommodations confirmed & paid · Round-trip tickets confirmed</p>
+        <p>Travel Insurance: Klook · Employment: Currently employed in Philippines</p>
+    </footer>
+</body>
+</html>
