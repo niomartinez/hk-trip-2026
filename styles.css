@@ -596,6 +596,39 @@ a.contact-value:hover {
     font-size: 0.9rem;
 }
 
+/* Medical details */
+.med-details {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.med-details li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.med-details li:last-child {
+    border-bottom: none;
+}
+
+.med-note {
+    color: var(--warning);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border);
+}
+
+.checklist-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
 .checklist-progress {
     margin-top: var(--spacing-lg);
     padding: var(--spacing-md);
