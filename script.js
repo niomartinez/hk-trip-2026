@@ -7,6 +7,7 @@
 const DOCUMENT_LINKS = {
     flight: 'https://drive.google.com/file/d/1NHu2H0W6aGRt1TVN-aIy8QilJx5NRJ9A/view?usp=sharing',
     insurance: 'https://drive.google.com/file/d/1d9dhJZ-xRGo92UnhayPdiCKTFgFxBHXP/view?usp=sharing',
+    pickup_collection: 'https://drive.google.com/file/d/1RjR8PsjU3-zMURSrPhzITjt8tYGq-sFd/view?usp=sharing',
     hotel1: 'https://drive.google.com/file/d/1gpQAANA96ag-sYyoZxgEz--tkGveFYH2/view?usp=sharing',
     hotel2: 'https://drive.google.com/file/d/1l3_7uPoVg-Pvm5mMjY328hZZCVoKFAFX/view?usp=sharing',
     hotel2_receipt: 'https://drive.google.com/file/d/1-xSUpsCTXHIKA3AoAA4auyhNFZwi5ZC6/view?usp=sharing',
