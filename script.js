@@ -26,6 +26,8 @@ const DOCUMENT_LINKS = {
     vaxx_nio_front: 'https://drive.google.com/file/d/1NAeuOB-6RZLo2aJLFoY7YY3wTE5uudzo/view?usp=sharing',
     vaxx_nio_back: 'https://drive.google.com/file/d/1Yziki0GSkkTsf-uMRqtERD859pKHwtYT/view?usp=sharing',
     vaxx_khatelyn: 'https://drive.google.com/file/d/1G44SQKn6zInCQ60K0n0xVLa1E4BHwbzl/view?usp=sharing',
+    etravel_nio: 'https://drive.google.com/file/d/1JH5e-Hp7avawXcCJICWL32TpLHtojHLc/view?usp=sharing',
+    etravel_khatelyn: 'https://drive.google.com/file/d/1MyWGYIEDGFzAfemJYo5fJhLgkQZSweU3/view?usp=sharing',
     tirzepatide_rx: 'https://drive.google.com/file/d/YOUR_TIRZEPATIDE_RX_ID/view',
     bank_nio: 'https://drive.google.com/file/d/YOUR_BANK_NIO_ID/view',
     bank_khatelyn: 'https://drive.google.com/file/d/YOUR_BANK_KHATELYN_ID/view'
