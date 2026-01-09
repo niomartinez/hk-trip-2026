@@ -19,7 +19,7 @@ const DOCUMENT_LINKS = {
     noc: 'https://drive.google.com/file/d/1d9dhJZ-xRGo92UnhayPdiCKTFgFxBHXP/view?usp=sharing',
     leave_khatelyn: 'https://drive.google.com/file/d/YOUR_KHATELYN_LEAVE_ID/view',
     coe_khatelyn: 'https://drive.google.com/file/d/1AfS1Apm7Utt3WFrJ1z94o6w22WVEcIya/view?usp=sharing',
-    companyid: 'https://drive.google.com/file/d/YOUR_COMPANY_ID_ID/view',
+    companyid: 'https://drive.google.com/file/d/1Je5Q4rpOWNhjwtKUk5YGQIPajEjRZq_x/view?usp=sharing',
     passport_nio: 'https://drive.google.com/file/d/1IsS2z80vvHGQfw6IiS5KxXfgnCZmiAfR/view?usp=drive_link',
     passport_khatelyn: 'https://drive.google.com/file/d/1HcSXZ1_Sapvytu52MwaYvPGKfZ_2quaN/view?usp=sharing',
     vaxx_nio_front: 'https://drive.google.com/file/d/1NAeuOB-6RZLo2aJLFoY7YY3wTE5uudzo/view?usp=sharing',
